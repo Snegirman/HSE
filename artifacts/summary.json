@@ -1,0 +1,11 @@
+{
+  "top_dns_domains": {},
+  "top_src_ips": {
+    "0.0.0.0": 2,
+    "192.168.0.1": 2
+  },
+  "total_dns": 0,
+  "total_dhcp": 4,
+  "total_http": 0,
+  "total_ip_pkts": 4
+}
