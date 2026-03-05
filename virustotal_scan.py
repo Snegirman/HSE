@@ -14,7 +14,9 @@ VirusTotal API Scanner
 3. Установите зависимости:
        pip install requests python-dotenv
 4. Запустите скрипт:
-       python virustotal_scan.py
+       python virustotal_scan.py                        # дефолтный URL
+       python virustotal_scan.py https://example.com    # указать URL аргументом
+       python virustotal_scan.py --help                 # справка
 
 Переменные окружения (файл .env):
 ----------------------------------
@@ -202,13 +204,24 @@ def get_url_report(url: str):
 
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Проверяет URL через VirusTotal API v3.",
+        epilog="Пример: python virustotal_scan.py https://example.com",
+    )
+    parser.add_argument(
+        "url",
+        nargs="?",
+        default="http://testphp.vulnweb.com/",
+        help="URL для сканирования (по умолчанию: http://testphp.vulnweb.com/)",
+    )
+    args = parser.parse_args()
+
     check_api_key()
 
-    # URL для проверки — замените на любой адрес, который хотите проверить
-    target_url = "http://testphp.vulnweb.com/"
-
     print(f"\nVirusTotal Scanner")
-    print(f"Цель: {target_url}\n")
+    print(f"Цель: {args.url}\n")
 
     # Полное сканирование URL: отправка + ожидание + вывод результатов
-    scan_url(target_url)
+    scan_url(args.url)
