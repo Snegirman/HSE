@@ -1,0 +1,23 @@
+﻿source,type,severity,ip,details,domain
+winevent,Brute-force,HIGH,192.168.1.100,27 неудачных попыток входа с IP 192.168.1.100,
+winevent,Brute-force,HIGH,198.51.100.23,38 неудачных попыток входа с IP 198.51.100.23,
+winevent,Brute-force,HIGH,203.0.113.45,24 неудачных попыток входа с IP 203.0.113.45,
+winevent,Очистка/остановка журнала,CRITICAL,10.0.2.15,admin: Очистка журнала аудита с IP 10.0.2.15,
+winevent,Очистка/остановка журнала,CRITICAL,10.0.2.15,SYSTEM: Служба журнала событий остановлена с IP 10.0.2.15,
+winevent,Подозрительная служба,CRITICAL,10.0.2.15,Установка новой службы: backdoor_svc с IP 10.0.2.15,
+winevent,Подозрительный процесс,HIGH,10.0.2.15,Запуск нового процесса: powershell.exe -enc с IP 10.0.2.15,
+winevent,Эскалация привилегий,HIGH,192.168.1.100,Назначение специальных привилегий (admin) с IP 192.168.1.100,
+winevent,Эскалация привилегий,HIGH,192.168.1.100,Добавление учётной записи в группу администраторов (admin) с IP 192.168.1.100,
+dns,Аномальный DNS (tunneling),MEDIUM,10.0.2.15,Аномальный DNS-запрос: EJFDEBFEEBFACACACACACACACACAAA с IP 10.0.2.15,
+dns,Подозрительный DNS-запрос,HIGH,192.168.1.100,Запрос к evil-c2-server.xyz — подозрительный TLD (.xyz) (30 раз) с IP 192.168.1.100,evil-c2-server.xyz
+dns,Аномальный DNS (tunneling),MEDIUM,192.168.1.100,Аномальный DNS-запрос: AABBCCDDEEAABBCCDDEEAABBCCDDEE с IP 192.168.1.100,
+dns,Подозрительный DNS-запрос,HIGH,192.168.1.100,Запрос к c2-callback.example.top — подозрительный TLD (.top) (25 раз) с IP 192.168.1.100,c2-callback.example.top
+dns,Подозрительный DNS-запрос,HIGH,10.0.2.15,Запрос к dga-aef3b2c1d4.xyz — подозрительный TLD (.xyz) (7 раз) с IP 10.0.2.15,dga-aef3b2c1d4.xyz
+http,Path Traversal,CRITICAL,203.0.113.45,Path Traversal: /../../../etc/passwd с IP 203.0.113.45,
+http,SQL Injection,CRITICAL,10.0.2.15,SQL Injection: /login.php?id=1' OR '1'='1 с IP 10.0.2.15,
+http,Доступ к чувствительным файлам,HIGH,203.0.113.45,Доступ к чувствительным файлам: /.env с IP 203.0.113.45,
+http,XSS,HIGH,10.0.2.15,XSS: /search?q=<script>alert(1)</script> с IP 10.0.2.15,
+http,Доступ к чувствительным файлам,HIGH,198.51.100.23,Доступ к чувствительным файлам: /admin/config.json с IP 198.51.100.23,
+http,SQL Injection,CRITICAL,10.0.2.15,SQL Injection: /login.php' UNION SELECT * FROM users-- с IP 10.0.2.15,
+http,Доступ к чувствительным файлам,HIGH,203.0.113.45,Доступ к чувствительным файлам: /wp-content/debug.log с IP 203.0.113.45,
+http,Command Injection,CRITICAL,198.51.100.23,Command Injection: /api/exec?cmd=whoami с IP 198.51.100.23,

@@ -1,0 +1,269 @@
+{
+  "report_date": "2026-03-07T23:14:31.114435",
+  "summary": {
+    "total_threats": 22,
+    "critical": 7,
+    "high": 13,
+    "medium": 2,
+    "actions_taken": 11
+  },
+  "threats": [
+    {
+      "source": "winevent",
+      "type": "Brute-force",
+      "severity": "HIGH",
+      "ip": "192.168.1.100",
+      "details": "27 неудачных попыток входа с IP 192.168.1.100"
+    },
+    {
+      "source": "winevent",
+      "type": "Brute-force",
+      "severity": "HIGH",
+      "ip": "198.51.100.23",
+      "details": "38 неудачных попыток входа с IP 198.51.100.23"
+    },
+    {
+      "source": "winevent",
+      "type": "Brute-force",
+      "severity": "HIGH",
+      "ip": "203.0.113.45",
+      "details": "24 неудачных попыток входа с IP 203.0.113.45"
+    },
+    {
+      "source": "winevent",
+      "type": "Очистка/остановка журнала",
+      "severity": "CRITICAL",
+      "ip": "10.0.2.15",
+      "details": "admin: Очистка журнала аудита с IP 10.0.2.15"
+    },
+    {
+      "source": "winevent",
+      "type": "Очистка/остановка журнала",
+      "severity": "CRITICAL",
+      "ip": "10.0.2.15",
+      "details": "SYSTEM: Служба журнала событий остановлена с IP 10.0.2.15"
+    },
+    {
+      "source": "winevent",
+      "type": "Подозрительная служба",
+      "severity": "CRITICAL",
+      "ip": "10.0.2.15",
+      "details": "Установка новой службы: backdoor_svc с IP 10.0.2.15"
+    },
+    {
+      "source": "winevent",
+      "type": "Подозрительный процесс",
+      "severity": "HIGH",
+      "ip": "10.0.2.15",
+      "details": "Запуск нового процесса: powershell.exe -enc с IP 10.0.2.15"
+    },
+    {
+      "source": "winevent",
+      "type": "Эскалация привилегий",
+      "severity": "HIGH",
+      "ip": "192.168.1.100",
+      "details": "Назначение специальных привилегий (admin) с IP 192.168.1.100"
+    },
+    {
+      "source": "winevent",
+      "type": "Эскалация привилегий",
+      "severity": "HIGH",
+      "ip": "192.168.1.100",
+      "details": "Добавление учётной записи в группу администраторов (admin) с IP 192.168.1.100"
+    },
+    {
+      "source": "dns",
+      "type": "Аномальный DNS (tunneling)",
+      "severity": "MEDIUM",
+      "ip": "10.0.2.15",
+      "details": "Аномальный DNS-запрос: EJFDEBFEEBFACACACACACACACACAAA с IP 10.0.2.15"
+    },
+    {
+      "source": "dns",
+      "type": "Подозрительный DNS-запрос",
+      "severity": "HIGH",
+      "ip": "192.168.1.100",
+      "domain": "evil-c2-server.xyz",
+      "details": "Запрос к evil-c2-server.xyz — подозрительный TLD (.xyz) (30 раз) с IP 192.168.1.100"
+    },
+    {
+      "source": "dns",
+      "type": "Аномальный DNS (tunneling)",
+      "severity": "MEDIUM",
+      "ip": "192.168.1.100",
+      "details": "Аномальный DNS-запрос: AABBCCDDEEAABBCCDDEEAABBCCDDEE с IP 192.168.1.100"
+    },
+    {
+      "source": "dns",
+      "type": "Подозрительный DNS-запрос",
+      "severity": "HIGH",
+      "ip": "192.168.1.100",
+      "domain": "c2-callback.example.top",
+      "details": "Запрос к c2-callback.example.top — подозрительный TLD (.top) (25 раз) с IP 192.168.1.100"
+    },
+    {
+      "source": "dns",
+      "type": "Подозрительный DNS-запрос",
+      "severity": "HIGH",
+      "ip": "10.0.2.15",
+      "domain": "dga-aef3b2c1d4.xyz",
+      "details": "Запрос к dga-aef3b2c1d4.xyz — подозрительный TLD (.xyz) (7 раз) с IP 10.0.2.15"
+    },
+    {
+      "source": "http",
+      "type": "Path Traversal",
+      "severity": "CRITICAL",
+      "ip": "203.0.113.45",
+      "details": "Path Traversal: /../../../etc/passwd с IP 203.0.113.45"
+    },
+    {
+      "source": "http",
+      "type": "SQL Injection",
+      "severity": "CRITICAL",
+      "ip": "10.0.2.15",
+      "details": "SQL Injection: /login.php?id=1' OR '1'='1 с IP 10.0.2.15"
+    },
+    {
+      "source": "http",
+      "type": "Доступ к чувствительным файлам",
+      "severity": "HIGH",
+      "ip": "203.0.113.45",
+      "details": "Доступ к чувствительным файлам: /.env с IP 203.0.113.45"
+    },
+    {
+      "source": "http",
+      "type": "XSS",
+      "severity": "HIGH",
+      "ip": "10.0.2.15",
+      "details": "XSS: /search?q=<script>alert(1)</script> с IP 10.0.2.15"
+    },
+    {
+      "source": "http",
+      "type": "Доступ к чувствительным файлам",
+      "severity": "HIGH",
+      "ip": "198.51.100.23",
+      "details": "Доступ к чувствительным файлам: /admin/config.json с IP 198.51.100.23"
+    },
+    {
+      "source": "http",
+      "type": "SQL Injection",
+      "severity": "CRITICAL",
+      "ip": "10.0.2.15",
+      "details": "SQL Injection: /login.php' UNION SELECT * FROM users-- с IP 10.0.2.15"
+    },
+    {
+      "source": "http",
+      "type": "Доступ к чувствительным файлам",
+      "severity": "HIGH",
+      "ip": "203.0.113.45",
+      "details": "Доступ к чувствительным файлам: /wp-content/debug.log с IP 203.0.113.45"
+    },
+    {
+      "source": "http",
+      "type": "Command Injection",
+      "severity": "CRITICAL",
+      "ip": "198.51.100.23",
+      "details": "Command Injection: /api/exec?cmd=whoami с IP 198.51.100.23"
+    }
+  ],
+  "virustotal_ip_results": [
+    {
+      "ip": "203.0.113.45",
+      "malicious": 0,
+      "suspicious": 0,
+      "harmless": 58,
+      "undetected": 36
+    },
+    {
+      "ip": "198.51.100.23",
+      "malicious": 0,
+      "suspicious": 0,
+      "harmless": 58,
+      "undetected": 36
+    }
+  ],
+  "virustotal_domain_results": [
+    {
+      "domain": "c2-callback.example.top",
+      "malicious": 0,
+      "suspicious": 0,
+      "harmless": 0,
+      "undetected": 94
+    },
+    {
+      "domain": "dga-aef3b2c1d4.xyz",
+      "malicious": 0,
+      "suspicious": 0,
+      "harmless": 0,
+      "undetected": 94
+    },
+    {
+      "domain": "evil-c2-server.xyz",
+      "malicious": 0,
+      "suspicious": 0,
+      "harmless": 0,
+      "undetected": 94
+    }
+  ],
+  "response_actions": [
+    {
+      "action": "BLOCK_IP",
+      "ip": "192.168.1.100",
+      "reason": "Brute-force",
+      "severity": "HIGH"
+    },
+    {
+      "action": "BLOCK_IP",
+      "ip": "198.51.100.23",
+      "reason": "Brute-force",
+      "severity": "HIGH"
+    },
+    {
+      "action": "BLOCK_IP",
+      "ip": "203.0.113.45",
+      "reason": "Brute-force",
+      "severity": "HIGH"
+    },
+    {
+      "action": "BLOCK_IP",
+      "ip": "10.0.2.15",
+      "reason": "Очистка/остановка журнала",
+      "severity": "CRITICAL"
+    },
+    {
+      "action": "ALERT",
+      "details": "admin: Очистка журнала аудита с IP 10.0.2.15",
+      "severity": "CRITICAL"
+    },
+    {
+      "action": "ALERT",
+      "details": "SYSTEM: Служба журнала событий остановлена с IP 10.0.2.15",
+      "severity": "CRITICAL"
+    },
+    {
+      "action": "ALERT",
+      "details": "Установка новой службы: backdoor_svc с IP 10.0.2.15",
+      "severity": "CRITICAL"
+    },
+    {
+      "action": "ALERT",
+      "details": "Path Traversal: /../../../etc/passwd с IP 203.0.113.45",
+      "severity": "CRITICAL"
+    },
+    {
+      "action": "ALERT",
+      "details": "SQL Injection: /login.php?id=1' OR '1'='1 с IP 10.0.2.15",
+      "severity": "CRITICAL"
+    },
+    {
+      "action": "ALERT",
+      "details": "SQL Injection: /login.php' UNION SELECT * FROM users-- с IP 10.0.2.15",
+      "severity": "CRITICAL"
+    },
+    {
+      "action": "ALERT",
+      "details": "Command Injection: /api/exec?cmd=whoami с IP 198.51.100.23",
+      "severity": "CRITICAL"
+    }
+  ]
+}
